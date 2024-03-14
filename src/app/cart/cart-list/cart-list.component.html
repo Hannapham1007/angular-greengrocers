@@ -1,0 +1,15 @@
+<div class="cart--item-list-container">
+    <ul class="item-list cart--item-list">
+      <li *ngFor="let product of cartProducts">
+        <img
+          class="cart--item-icon"
+          src="assets/icons/{{ product.id }}.svg"
+          alt="{{ product.name }}"
+        />
+        <p>{{ product.name }}</p>
+        <button class="quantity-btn remove-btn center" (click)="decreaseQuantity(product)">-</button>
+        <span class="quantity-text center">{{ product.quantity }}</span>
+        <button class="quantity-btn add-btn center" (click)="increaseQuantity(product)">+</button>
+      </li>
+    </ul>
+</div>

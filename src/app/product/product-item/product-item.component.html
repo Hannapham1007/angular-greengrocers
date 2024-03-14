@@ -1,0 +1,4 @@
+<div *ngIf="product" class="store--item-icon">
+  <img src="assets/icons/{{ product.id }}.svg" alt="{{ product.name }}" />
+</div>
+<button (click)="addToCart()">Add to cart</button>
